@@ -18,3 +18,108 @@ body {
 .container {
 	margin: auto;
 }
+
+/*Start Header*/
+header {
+	padding: 50px 10px;
+}
+
+@media (max-width: 992px) {
+	html {
+		font-size: 14px;
+	}
+
+	header {
+		padding: 30px 10px;
+	}
+}
+
+header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header img {
+	min-width: 50px;
+	height: auto;
+}
+
+@media (max-width: 769px) {
+	header img {
+		width: 200px;
+	}
+}
+
+header a {
+	font-size: 1rem;
+	color: hsl(322, 100%, 66%);
+	padding: 10px 30px;
+	border: 1px solid hsl(322, 100%, 66%);
+	transition: 0.4s ease all;
+}
+
+header a:hover {
+	background-color: hsl(322, 100%, 66%);
+	color: white;
+}
+/*End Header*/
+
+/*Start Landing*/
+@media (max-width: 992px) {
+	section.landing {
+		padding: 0px 50px;
+		height: calc(60vh - 103px);
+	}
+}
+
+@media (min-width: 992px) {
+	section.landing {
+		height: calc(100vh - 146px);
+	}
+}
+
+section.landing .container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 25px;
+	text-align: center;
+}
+
+section.landing h1 {
+	font-family: "Poppins", sans-serif;
+	font-size: 3rem;
+	color: hsl(192, 100%, 9%);
+}
+
+section.landing p {
+	max-width: 600px;
+	font-size: 1.2rem;
+}
+
+@media (max-width: 769px) {
+	section.landing h1 {
+		font-size: 2rem;
+	}
+
+	section.landing p {
+		font-size: 1rem;
+	}
+}
+
+section.landing a {
+	color: white;
+	padding: 15px 30px;
+	background-color: hsl(322, 100%, 66%);
+	transition: 0.4s ease all;
+	max-width: 400px;
+	font-weight: 700;
+}
+
+section.landing a:hover {
+	opacity: 0.9;
+}
+/*End Landing*/
