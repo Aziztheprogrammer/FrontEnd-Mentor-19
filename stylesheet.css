@@ -19,6 +19,12 @@ body {
 	margin: auto;
 }
 
+@media (max-width: 992px) {
+	section .container {
+		padding: 0px 50px;
+	}
+}
+
 /*Start Header*/
 header {
 	padding: 50px 10px;
@@ -68,7 +74,6 @@ header a:hover {
 /*Start Landing*/
 @media (max-width: 992px) {
 	section.landing {
-		padding: 0px 50px;
 		height: calc(60vh - 103px);
 	}
 }
@@ -123,3 +128,172 @@ section.landing a:hover {
 	opacity: 0.9;
 }
 /*End Landing*/
+
+/*Start Stats Section*/
+section.stats {
+	padding: 0px 0px var(--section-padding) 0px;
+}
+
+section.stats .container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 50px;
+}
+
+section.stats .container > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 200px;
+}
+
+@media (max-width: 992px) {
+	section.stats .container > div {
+		gap: 50px;
+	}
+}
+
+section.stats .container > div > div {
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+}
+
+@media (max-width: 992px) {
+	section.stats .container > div > div {
+		width: 100%;
+	}
+
+	section.stats .container > div > div img {
+		margin: 0px auto;
+	}
+}
+
+section.stats .container > div > div span {
+	font-size: 5rem;
+	font-weight: 700;
+}
+
+section.stats .container > div > div p {
+	font-family: "Open sans", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #666;
+}
+/*End Stats Section*/
+
+/*Start Services Section*/
+section.services {
+	padding: calc(var(--section-padding) + 100px) 0px;
+	display: flex;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 250px;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+section.services > div {
+	position: relative;
+}
+
+section.services > div .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
+}
+
+@media (max-width: 992px) {
+	section.services {
+		gap: 150px;
+		padding: var(--section-padding) 0px;
+	}
+
+	section.services > div .container {
+		flex-direction: column-reverse !important;
+		flex-wrap: wrap;
+	}
+
+	section.services > div .container .text {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+section.services > div:nth-child(1) {
+	background-color: #F6FBFF;
+}
+
+section.services > div:nth-child(1)::after {
+	content: url("images/bg-section-top-desktop-1.svg");
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: translate(-50%, -95%);
+}
+
+section.services > div:nth-child(1)::before {
+	content: url("images/bg-section-bottom-desktop-1.svg");
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, 95%);
+}
+
+section.services > div:nth-child(2) {
+	flex-direction: row-reverse;
+}
+
+section.services > div:nth-child(3) {
+	background-color: #F6FBFF;
+}
+
+section.services > div:nth-child(3)::after {
+	content: url("images/bg-section-top-desktop-2.svg");
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: translate(-50%, -95%);
+}
+
+section.services > div:nth-child(3)::before {
+	content: url("images/bg-section-bottom-desktop-2.svg");
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, 95%);
+}
+
+@media (max-width: 769px) {
+	section.services > div:nth-child(1)::before,
+	section.services > div:nth-child(3)::before,
+	section.services > div:nth-child(1)::after,
+	section.services > div:nth-child(3)::after {
+		content: "";
+	}
+
+	section.services > div:nth-child(1),
+	section.services > div:nth-child(3) {
+		background-color: white;
+	}
+}
+
+section.services > div .text h2 {
+	font-family: "Poppins", sans-serif;
+	margin-bottom: 15px;
+	font-size: 2.5rem;
+	color: hsl(192, 100%, 9%);
+}
+
+section.services > div .text p {
+	max-width: 600px;
+	font-weight: 600;
+	color: hsl(192, 100%, 9%);
+}
+
+section.services > div img {
+	max-height: 350px;
+}
+/*End Services Section*/
