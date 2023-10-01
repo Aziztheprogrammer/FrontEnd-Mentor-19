@@ -297,3 +297,36 @@ section.services > div img {
 	max-height: 350px;
 }
 /*End Services Section*/
+
+/*Start Build Your Community Section*/
+section.byc-section {
+	padding: var(--section-padding) 0px;
+	text-align: center;
+}
+
+section.byc-section .container h1 {
+	font-family: "Poppins", sans-serif;
+	font-size: 2.5rem;
+	color: hsl(192, 100%, 9%);
+	margin-bottom: 30px;
+}
+
+@media (max-width: 769px) {
+	section.byc-section .container h1 {
+		font-size: 2rem;
+	}
+}
+
+section.byc-section .container a {
+	color: white;
+	padding: 15px 30px;
+	background-color: hsl(322, 100%, 66%);
+	transition: 0.4s ease all;
+	max-width: 400px;
+	font-weight: 700;
+}
+
+section.byc-section .container a:hover {
+	opacity: 0.9;
+}
+/*End Build Your Community Section*/
