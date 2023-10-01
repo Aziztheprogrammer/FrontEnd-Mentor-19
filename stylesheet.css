@@ -300,7 +300,7 @@ section.services > div img {
 
 /*Start Build Your Community Section*/
 section.byc-section {
-	padding: var(--section-padding) 0px;
+	padding: var(--section-padding) 0px calc(var(--section-padding) * 2) 0px;
 	text-align: center;
 }
 
@@ -330,3 +330,110 @@ section.byc-section .container a:hover {
 	opacity: 0.9;
 }
 /*End Build Your Community Section*/
+
+/*Start Footer*/
+footer {
+	padding: var(--section-padding) 0px;
+	background-color: hsl(192, 100%, 9%);
+	color: #fff;
+	position: relative;
+}
+
+footer::after {
+	content: "";
+	background: url("images/bg-footer-top-desktop.svg") no-repeat center center;
+	background-size: 100% 100px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	transform: translateY(-95%);
+	min-height: 100px;
+}
+
+@media (max-width: 769px) {
+	footer::after {
+		background: url("images/bg-footer-top-mobile.svg") 
+		no-repeat center center;
+		background-size: cover;
+	}
+}
+
+footer .container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+footer .container > div {
+	max-width: 400px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 30px;
+}
+
+@media (max-width: 992px) {
+	footer .container {
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+		align-items: center;
+		gap: 60px;
+	}
+
+	footer .container > div {
+		width: 100%;
+	}
+}
+
+footer .container > div.about span img {
+	display: inline-block;
+	margin-right: 15px;
+}
+
+footer .container > div.about div.social-media {
+	margin-top: 25px;
+	display: flex;
+	gap: 15px;
+	font-size: 2rem;
+}
+
+footer .container > div.newsletter h1 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+footer .container > div.newsletter > .input {
+	width: 100%;
+	display: flex;
+	gap: 15px;
+}
+
+@media (max-width: 769px) {
+	footer .container > div.newsletter > .input {
+		flex-direction: column;
+		align-items: stretch;
+	}
+}
+
+footer .container > div.newsletter > .input input {
+	flex-grow: 1;
+	border-radius: 5px;
+	padding: 10px 0px;
+}
+
+footer .container > div.newsletter > .input button {
+	background-color: hsl(322, 100%, 66%);
+	color: white;
+	font-weight: 600;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: 0.4s ease opacity;
+}
+
+footer .container > div.newsletter > .input button:hover {
+	opacity: 0.9;
+}
+/*End Footer*/
